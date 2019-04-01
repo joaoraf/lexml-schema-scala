@@ -1222,13 +1222,13 @@
 
 	<xsd:element name="MetadadoProprietario">
 		<xsd:complexType>
-			<xsd:complexContent>
-				<xsd:extension base="xsd:anyType">
-					<xsd:attributeGroup ref="source"/>
-				</xsd:extension>
-			</xsd:complexContent>
-		</xsd:complexType>
-	</xsd:element>
+	      <xsd:sequence>
+	        <xsd:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+	      </xsd:sequence>
+	      <xsd:attributeGroup ref="source"/>
+	    </xsd:complexType>
+	  </xsd:element>
+		
 
     <xsd:annotation>
         <xsd:documentation>
