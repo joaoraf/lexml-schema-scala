@@ -5,8 +5,8 @@ import scala.xml._
 
 
 object LexmlSchema {
-  def apply(e : scala.xml.Elem) : DocumentTypes = scalaxb.fromXML[DocumentTypes](e)
-  def apply(f : java.io.File) : DocumentTypes = apply(XML.loadFile(f))
-  def apply(src : String) : DocumentTypes = apply(XML.loadString(src)) 
+  def apply(e : scala.xml.Elem) : LexML = scalaxb.fromXML[LexML](e)
+  def apply(f : java.io.File) : LexML = apply(XML.loadFile(f))
+  def apply(src : String) : LexML = apply(XML.loadString(src)) 
     
 }
