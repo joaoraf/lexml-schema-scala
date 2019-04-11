@@ -399,6 +399,7 @@
         </xsd:sequence>
         <xsd:attributeGroup ref="coreopt" />
         <xsd:attribute type="xsd:string" name="nome" />
+        <xsd:attributeGroup ref="attrsCitacao"/>
     </xsd:complexType>
 
 
@@ -455,6 +456,7 @@
         <xsd:attribute type="xsd:string" name="target" />
         <xsd:attribute type="xsd:integer" name="rowspan" />
         <xsd:attribute type="xsd:integer" name="colspan" />
+        <xsd:attributeGroup ref="attrsCitacao"/>
     </xsd:complexType>
 
 
@@ -552,6 +554,7 @@
         </xsd:sequence>
         <xsd:attributeGroup ref="coreoptArt" />
         <xsd:attribute type="xsd:string" name="nome" />
+        <xsd:attributeGroup ref="attrsCitacao"/>
     </xsd:complexType>
 
 
@@ -672,6 +675,7 @@
         </xsd:sequence>
         <xsd:attributeGroup ref="coreopt" />
         <xsd:attribute type="xsd:string" name="nome" />
+        <xsd:attributeGroup ref="attrsCitacao"/>
     </xsd:complexType>
 
 
@@ -709,6 +713,7 @@
             <xsd:element ref="p" minOccurs="0" maxOccurs="1" />
         </xsd:sequence>
         <xsd:attributeGroup ref="coreopt" />
+        <xsd:attributeGroup ref="attrsCitacao"/>
     </xsd:complexType>
 
     <xsd:complexType name="textoType">
@@ -716,6 +721,7 @@
             <xsd:element ref="p" minOccurs="0" maxOccurs="unbounded" />
         </xsd:sequence>
         <xsd:attributeGroup ref="coreopt" />
+        <xsd:attributeGroup ref="attrsCitacao"/>
     </xsd:complexType>
 
     <xsd:complexType name="EventoList">
