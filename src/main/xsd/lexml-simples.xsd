@@ -575,7 +575,8 @@
         <xsd:choice>
             <xsd:element ref="Remissao" />
             <xsd:element ref="RemissaoMultipla" />
-            <xsd:element ref="Alteracao" />
+            <!-- Removido: inclusão gera problemas devido ao fato de alteração conter elementos de bloco:
+              <xsd:element ref="Alteracao" />  -->
             <xsd:element ref="Formula" />
             <xsd:element ref="span" />
             <xsd:element ref="b" />
