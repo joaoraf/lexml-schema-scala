@@ -225,11 +225,11 @@
             <version>1.0.7</version>
         </dependency>
 
-    <dependency>
+    <!--  <dependency>
         <groupId>com.lihaoyi</groupId>
         <artifactId>pprint_${scala.version}</artifactId>
         <version>0.5.3</version>
-    </dependency>
+    </dependency>  -->
 
     </dependencies>
 </project>
