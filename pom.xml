@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.gov.lexml</groupId>
     <artifactId>lexml-schema-scala</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
 
 
     <properties>
@@ -22,7 +22,7 @@
         <url>https://github.com/lexml/${project.artifactId}</url>
         <developerConnection>scm:git:https://github.com/lexml/${project.artifactId}.git</developerConnection>
         <connection>scm:git:https://github.com/lexml/${project.artifactId}.git</connection>
-        <tag>HEAD</tag>
+        <tag>1.0.3</tag>
     </scm>
 
     <distributionManagement>
@@ -126,9 +126,9 @@
             <configuration>
               <target>
                 <replaceregexp flags="g">
-                  <regexp pattern="\bscalaxb\b"/>
-                  <substitution expression="br.gov.lexml.schema.scala.scalaxb"/>
-                  <fileset dir="target/generated-sources/scalaxb" includes="**/*.scala"/>
+                  <regexp pattern="\bscalaxb\b" />
+                  <substitution expression="br.gov.lexml.schema.scala.scalaxb" />
+                  <fileset dir="target/generated-sources/scalaxb" includes="**/*.scala" />
                 </replaceregexp>
                 <!--
                   Place any Ant task here. You can add anything
