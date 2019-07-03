@@ -81,9 +81,9 @@
     <xsd:element type="refURNAlvo" name="ModificacaoTextual" />
     <xsd:element type="refURNAlvo" name="RevogacaoParcial" />
 
-    <xsd:element type="textoSimplesOptType" name="FormulaPromulgacao" />
-    <xsd:element type="textoSimplesOptType" name="LocalDataFecho" />
-    <xsd:element type="textoSimplesOptType" name="Observacao" />
+    <xsd:element type="parsType" name="FormulaPromulgacao" />
+    <xsd:element type="parsType" name="LocalDataFecho" />
+    <xsd:element type="parsType" name="Observacao" />
 
     <xsd:element type="textoType" name="Preambulo" />
 
@@ -182,6 +182,8 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+    
+    <xsd:element name="AssinaturaTexto" type="parsType"/>
 
     <xsd:element name="CabecalhoAcordao">
         <xsd:complexType>
@@ -635,6 +637,7 @@
 
     <xsd:group name="ParteFinalAssinatura">
         <xsd:choice>
+        	<xsd:element ref="AssinaturaTexto" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element ref="AssinaturaGrupo" minOccurs="0" maxOccurs="unbounded" />
             <xsd:group ref="AssinaturaGrupoChoice" />
         </xsd:choice>
@@ -730,6 +733,13 @@
             <xsd:element ref="Evento" minOccurs="0" maxOccurs="unbounded" />
         </xsd:sequence>
     </xsd:complexType>
+    
+    <xsd:complexType name="parsType">
+        <xsd:sequence>
+            <xsd:element ref="p" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>        
+    </xsd:complexType>
+    
 
     <xsd:attributeGroup name="HTMLattrs">
         <xsd:attribute type="xsd:string" name="class" />
