@@ -38,6 +38,7 @@
     <xsd:element type="hierarchy" name="Secao" />
     <xsd:element type="hierarchy" name="Subsecao" />
     <xsd:element type="hierarchy" name="Titulo" />
+    <xsd:element type="hierarchy" name="Subtitulo" />
     <xsd:element type="hierarchy" name="AgrupamentoHierarquico" />
 
     <xsd:element type="genInline" name="Bloco" />
@@ -517,6 +518,7 @@
             <xsd:element ref="Parte" />
             <xsd:element ref="Livro" />
             <xsd:element ref="Titulo" />
+            <xsd:element ref="Subtitulo" />
             <xsd:element ref="Capitulo" />
             <xsd:element ref="Secao" />
             <xsd:element ref="Artigo" />
