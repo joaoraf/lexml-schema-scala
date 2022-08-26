@@ -171,19 +171,14 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element ref="NomeGrupo" />
-                <xsd:group ref="AssinaturaGrupoChoice" />
+                <xsd:choice minOccurs="1" maxOccurs="unbounded">
+                    <xsd:element ref="Assinatura"/>
+                    <xsd:element ref="AssinaturaTexto"/>
+                </xsd:choice>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:element name="Assinaturas">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element ref="Assinatura" minOccurs="1" maxOccurs="unbounded" />
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-    
     <xsd:element name="AssinaturaTexto" type="parsType"/>
 
     <xsd:element name="CabecalhoAcordao">
@@ -323,7 +318,11 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element ref="LocalDataFecho" minOccurs="0" maxOccurs="1" />
-                <xsd:group ref="ParteFinalAssinatura" />
+                <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                    <xsd:element ref="AssinaturaTexto"/>
+                    <xsd:element ref="AssinaturaGrupo"/>
+                    <xsd:element ref="Assinatura"/>
+                </xsd:choice>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -630,18 +629,11 @@
         </xsd:choice>
     </xsd:group>
 
-    <xsd:group name="AssinaturaGrupoChoice">
-        <xsd:choice>
-            <xsd:element ref="Assinaturas" minOccurs="0" maxOccurs="unbounded" />
-            <xsd:element ref="Assinatura" minOccurs="0" maxOccurs="unbounded" />
-        </xsd:choice>
-    </xsd:group>
-
     <xsd:group name="ParteFinalAssinatura">
         <xsd:choice>
-        	<xsd:element ref="AssinaturaTexto" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="AssinaturaGrupo" minOccurs="0" maxOccurs="unbounded" />
-            <xsd:group ref="AssinaturaGrupoChoice" />
+        	<xsd:element ref="AssinaturaTexto"/>
+            <xsd:element ref="AssinaturaGrupo"/>
+            <xsd:element ref="Assinatura"/>
         </xsd:choice>
     </xsd:group>
 
